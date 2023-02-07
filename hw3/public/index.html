@@ -1,0 +1,95 @@
+<!-- Cheesecake.html is a cheesecake order form
+     Author: Bryan Soriano-Salinas
+     Assignment: CS341 HW1
+     Date: Spring 23 -->
+
+<html>
+
+<head>
+  <title>Cheesecake Form</title> 
+  <link rel="stylesheet" href="/stylesheets/stylesheet.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/> </script>
+
+</head>
+
+<body>
+<h1>Cheesecake Order Form</h1>
+
+<!-- Adds image with fixed size -->
+<img
+  src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg"
+  alt="C"
+  width = "500"
+  height = "500" >
+
+<h2 id="head2">Personalize Your Cheesecake!</h2>
+
+<!-- form includes all details needed to place an order -->
+<form action="/action_page.php">
+  <p>Quantity</p>
+  <select id="quantity">
+	<!-- includes option in quality in a scroll-down menu -->
+       <option>-Please choose an option-</option>
+       <option>1</option>
+       <option>2</option>
+       <option>3</option>
+       <option>4</option>
+       <option>5</option>
+       <option>6</option>
+       <option>7</option>
+       <option>8</option>
+       <option>9</option>
+   </select>
+
+
+  <p>Toppings:</p>
+  <input type="radio" id="t1" name="topping" value="Plain">
+  <label for="t1">Plain</label><br>
+  <input type="radio" id="t2" name="topping" value="Cherry">
+  <label for="t2">Cherry</label><br>  
+  <input type="radio" id="t3" name="topping" value="Chocolate">
+  <label for="t3">Chocolate</label>
+
+  <!-- Notes box and submit -->
+  <p><label for="notes">Notes:</label></p>
+  <textarea id="notes" rows="3" cols="30">Enter any special instructions here:</textarea>
+  <p><button id="submit">Order</button></p>
+</form>
+
+<h3>Total Orders for</label>
+
+   <div class="dropdown">
+     <button id="months" class="dropbtn">Jan</button>
+      <div id="ddmon" class="dropdown-content">
+       <a id="jan" name="Jan">Jan</a>
+       <a id="feb" name="Feb">Feb</a>
+       <a id="mar" name="Mar">Mar</a>
+       <a id="apr" name="Apr">Apr</a>
+       <a id="may" name="May">May</a>
+       <a id="jun" name="Jun">Jun</a>
+       <a id="jul" name="Jul">Jul</a>
+       <a id="aug" name="Aug">Aug</a>
+       <a id="sep" name="Sep">Sep</a>
+       <a id="oct" name="Oct">Oct</a>
+       <a id="nov" name="Nov">Nov</a>
+       <a id="dec" name="Dec">Dec</a>
+     </div>
+   </div></h3>
+
+<p>
+   <ul id="list">
+      <li>11 cherry</li>
+      <li>17 chocolate</li>
+      <li>31 plain</li>
+   </ul>
+</p>
+
+</body>
+
+
+
+<!-- Changing webpage with javascript -->
+<script src="javascripts/cheesescript.js"></script>
+
+
+</html>
