@@ -1,29 +1,37 @@
+//////////////////////
+//
+// javascript for cheesecake form
+// Author: Bryan Soriano
+// Date: Spring 23
+//
+//////////////////////
+
 $("#submit").click(function(){
 
 	var input = $("#notes").val();
 
-	// <!-- if vegan is in the notes give a warning, else display order details>
+	// if vegan is in the notes give a warning, else display order details
 	if (input.indexOf('vegan') > -1) {
 		alert("WARNING! Cheesecakes contain dairy.");
 	} else { 
-	//<!-- Get values of the menus to report -->
+	// Get values of the menus to report
      
 	var amount = $( "#quantity" ).val();
 	var tops = $("input[name='topping']:checked").val();
 	var txt = $("#notes").val();
-	$("h2").html("<b>Thank you for your order! <br>Quantity: </b>" + amount + "<b><br> Topping: </b>" + tops +
-				"<b><br>Notes: </b>" + txt);
+	$("h2").html("\nThank you for your order!\n Quantity: " + amount + "\n Topping: " + tops +
+				"\n Notes: " + txt);
       
 	$("form").hide();
 	}    
 });
 
 
-//<!-- update dropdown with selected value -->  
+// Update dropdown with selected value
 
 	
   
-//<!-- listen for when a month is clicked -->
+// Listen for when a month is clicked
   
 $('#jan').click(function () {
 	$("#months").text("Jan");
